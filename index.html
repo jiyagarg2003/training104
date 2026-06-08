@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimal-ui">
+    <title>Training TR-104 | Cyber Security</title>
+    <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap)" rel="stylesheet">
+    <style>
+        :root{
+    --nav-footer:#0E3145;
+    --button:#1E5567;
+    --button-hover:#229295;
+
+    --background:#F5F8F4;
+    --container:#FFFFFF;
+
+    --text:#183446;
+    --border:#D8E5DD;
+
+    --shadow:0 8px 30px rgba(14,49,69,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--background);
+    color:var(--text);
+    min-height:100vh;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1250px;
+    margin:0 auto;
+    min-height:100vh;
+    background:var(--container);
+    box-shadow:var(--shadow);
+}
+
+/* HEADER */
+
+header{
+    background:var(--nav-footer);
+    padding:18px 35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header img{
+    height:65px;
+    transition:.3s ease;
+}
+
+header img:hover{
+    transform:scale(1.05);
+}
+
+.home-button{
+    background:#ffffff;
+    color:var(--nav-footer);
+    border:none;
+    padding:12px 24px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:15px;
+    transition:.3s ease;
+}
+
+.home-button:hover{
+    background:#B2CF98;
+}
+
+/* SECTIONS */
+
+.section{
+    display:none;
+    padding:35px;
+    animation:fadeIn .4s ease;
+}
+
+.section.active{
+    display:block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* HOME CARD */
+
+.intro{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.intro p{
+    color:var(--text);
+    font-size:1.05rem;
+    margin-bottom:10px;
+    font-weight:500;
+}
+
+.intro h1{
+    color:var(--text);
+    font-size:3.5rem;
+    margin:20px 0;
+    font-weight:700;
+}
+
+.intro b{
+    color:var(--text);
+}
+
+/* MONTH NAVIGATION */
+
+.day-navigation{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
+}
+
+.nav-button{
+    text-decoration:none;
+    background:var(--button);
+    color:#ffffff;
+    padding:16px;
+    border-radius:12px;
+    font-weight:600;
+    text-align:center;
+    transition:.3s ease;
+}
+
+.nav-button:hover{
+    background:var(--button-hover);
+    transform:translateY(-4px);
+}
+
+.nav-button i{
+    margin-right:8px;
+}
+
+/* PAGE TITLES */
+
+h1{
+    color:var(--text);
+    text-align:center;
+    margin-bottom:25px;
+    font-size:2rem;
+    font-weight:700;
+}
+
+h2,h3,h4,h5,h6,
+p,
+span,
+strong,
+b{
+    color:var(--text);
+}
+
+/* PDF VIEWER */
+
+.pdf-container{
+    background:#ffffff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:15px;
+    box-shadow:var(--shadow);
+}
+
+.pdf-container iframe{
+    width:100%;
+    height:82vh;
+    border:none;
+    border-radius:10px;
+    background:#ffffff;
+}
+
+/* LOADER */
+
+.loader{
+    display:none;
+    text-align:center;
+    padding:30px;
+}
+
+.loader.active{
+    display:block;
+}
+
+.loader i{
+    color:var(--button);
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--nav-footer);
+    color:#ffffff;
+    text-align:center;
+    padding:25px;
+    margin-top:30px;
+}
+
+footer p{
+    color:#ffffff;
+    margin-bottom:10px;
+}
+
+footer a{
+    color:#B2CF98;
+    text-decoration:none;
+    font-size:1.6rem;
+    transition:.3s ease;
+}
+
+footer a:hover{
+    color:#ffffff;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#EAF0EB;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#1E5567;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#229295;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .section{
+        padding:20px;
+    }
+
+    .intro{
+        padding:35px 20px;
+    }
+
+    .intro h1{
+        font-size:2.3rem;
+    }
+
+    .day-navigation{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:500px){
+
+    .day-navigation{
+        grid-template-columns:1fr;
+    }
+
+    .intro h1{
+        font-size:1.8rem;
+    }
+
+    .pdf-container iframe{
+        height:70vh;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="[gndec.ac.in](https://www.gndec.ac.in/)">
+                <img src="GNDEC-logo.png" alt="GNDEC Logo">
+            </a>
+            <div class="header-buttons">
+                <button class="home-button" onclick="showSection('home')">
+                    <i class="fas fa-home"></i> Home
+                </button>
+            </div>
+        </header>
+
+        <!-- Loading Indicator -->
+        <div class="loader" id="loader">
+            <i class="fas fa-spinner fa-spin fa-2x"></i>
+            <p>Loading content...</p>
+        </div>
+
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="intro">
+                <div style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 10px; backdrop-filter: blur(10px);">
+                    <p><i class="fas fa-user-graduate"></i> Submitted by: Jiya Garg</p>
+                    <p><i class="fas fa-users"></i> Class: D4 CSE C</p>
+                    <p><i class="fas fa-id-card"></i> URN: 2104131</p>
+                    <p><i class="fas fa-university"></i> Guru Nanak Dev Engineering College, Gill Park, Ludhiana</p>
+                    <p><b><i class="fas fa-briefcase"></i> 6 Months Industrial Training</b></p>
+                    <p><b><i class="fas fa-laptop-code"></i> on</b></p>
+                    <h1>Cyber Security</h1>
+                </div>
+
+                <nav class="day-navigation">
+                    <a href="#" class="nav-button" onclick="showSectionWithLoader('month1')">
+                        <i class="fas fa-calendar-alt"></i> Month-1
+                    </a>
+                    <a href="#" class="nav-button" onclick="showSectionWithLoader('month2')">
+                        <i class="fas fa-calendar-alt"></i> Month-2
+                    </a>
+                    <a href="#" class="nav-button" onclick="showSectionWithLoader('month3')">
+                        <i class="fas fa-calendar-alt"></i> Month-3
+                    </a>
+                    <a href="#" class="nav-button" onclick="showSectionWithLoader('month4')">
+                        <i class="fas fa-calendar-alt"></i> Month-4
+                    </a>
+                    <a href="#" class="nav-button" onclick="showSectionWithLoader('month5')">
+                        <i class="fas fa-calendar-alt"></i> Month-5
+                    </a>
+                    <a href="#" class="nav-button" onclick="showSectionWithLoader('month6')">
+                        <i class="fas fa-calendar-alt"></i> Month-6
+                    </a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- MONTH SECTIONS -->
+        <section id="month1" class="section">
+            <h1><i class="fas fa-file-pdf"></i> Industrial Training Diary Month-1</h1>
+            <div class="pdf-container">
+                <iframe src="./month1.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="month2" class="section">
+            <h1><i class="fas fa-file-pdf"></i> Industrial Training Diary Month-2</h1>
+            <div class="pdf-container">
+                <iframe src="./month2.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="month3" class="section">
+            <h1><i class="fas fa-file-pdf"></i> Industrial Training Diary Month-3</h1>
+            <div class="pdf-container">
+                <iframe src="./month3.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="month4" class="section">
+            <h1><i class="fas fa-file-pdf"></i> Industrial Training Diary Month-4</h1>
+            <div class="pdf-container">
+                <iframe src="./month4.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="month5" class="section">
+            <h1><i class="fas fa-file-pdf"></i> Industrial Training Diary Month-5</h1>
+            <div class="pdf-container">
+                <iframe src="./month5.pdf"></iframe>
+            </div>
+        </section>
+
+        <section id="month6" class="section">
+            <h1><i class="fas fa-file-pdf"></i> Industrial Training Diary Month-6</h1>
+            <div class="pdf-container">
+                <iframe src="./month6.pdf"></iframe>
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                Connect with me on
+                <a href="[linkedin.com](https://www.linkedin.com/in/jiya-garg-11aug/)" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(id) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function showSectionWithLoader(id) {
+            const loader = document.getElementById('loader');
+            loader.classList.add('active');
+            
+            setTimeout(() => {
+                showSection(id);
+                loader.classList.remove('active');
+            }, 500);
+        }
+    </script>
+</body>
+</html>
