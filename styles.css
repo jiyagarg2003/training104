@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #002147;
+    color: #fff;
+}
+
+header img {
+    height: 50px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.header-buttons {
+    display: flex;
+}
+
+.header-buttons .home-button {
+    color: #002147;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.header-buttons .home-button:hover {
+    background-color: #002147;
+    color: #fff;
+    border: 1px solid white;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+    background-color: #D1E0F0;
+}
+
+.intro p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+    color: #002147;
+}
+
+.day-navigation, .task-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #D1E0F0;
+    padding: 10px 0;
+}
+
+.day-navigation a, .task-navigation a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #002147;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.day-navigation a:hover, .task-navigation a:hover {
+    background-color: #fff;
+    color: #002147;
+    border: 1px solid #002147;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.section.active {
+    display: block;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 600px;
+    margin-top: 20px;
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002147;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .header-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header-buttons .home-button {
+        margin: 10px 0;
+    }
+    
+    .intro h1 {
+        font-size: 2em;
+    }
+    
+    .day-navigation a, .task-navigation a {
+        padding: 8px 15px;
+        margin: 3px;
+    }
+    
+    .pdf-container {
+        height: 400px;
+    }
+}
